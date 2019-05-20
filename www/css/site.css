@@ -9,17 +9,6 @@ body {
     opacity: 0.75
 }
 
-/*
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-   Set the fixed height of the footer here 
-  height: 60px;
-  background-color: #f5f5f5;
-}
-*/
 .footer {
     height: 60px;
     line-height: 30px;
@@ -43,8 +32,8 @@ body {
 }
 
 .dark-opc-bg {
-    background-color: rgba(33, 37, 41, 0.9);
-
+   background-color: #A7C6DA;
+   color: #01161E
 }
 
 .border-gold {
@@ -66,5 +55,15 @@ body {
 }
 
 .border-5 {
-    border-width: 5px !important;
+    border: 5px solid #726DA8;
+
+}
+
+.cust-shadow {
+    box-shadow: 5px 5px 15px #01161E;
+}
+
+.bg-dark{
+    background-color: #79BEEE !important;
+   
 }
