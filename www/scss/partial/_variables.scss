@@ -1,0 +1,15 @@
+$colors:(
+    primary:#0278C2,
+    lighter-accent: #15B5F4,
+    darker-accent:darken(#0278C2, 10%),
+    traid-accent-red:#CC1617,
+    white:#EFFAFE,
+    black:#0A0908
+);
+
+$padding: 15px;
+$circleSize:100px;
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}

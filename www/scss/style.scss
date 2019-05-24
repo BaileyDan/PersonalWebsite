@@ -1,0 +1,89 @@
+@import "partial/_variables.scss";
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0px;
+  background-color: color(primary);
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  align-items: center;
+
+  #bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    &.br {
+      background-color: color(lighter-accent);
+      clip-path: polygon(100% 0, 100% 38%, 100% 100%, 0 100%, 85% 91%);
+    }
+
+    &.tl {
+      background-color: color(darker-accent);
+      clip-path: polygon(100% 0, 38% 0%, 0 0, 0 100%, 15% 9%);
+    }
+  }
+}
+
+main {
+  width: 100%;
+  section {
+    .circleContainer {
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+
+      .circle{
+        height:$circleSize;
+        width: $circleSize;
+        border-radius: 50%;
+      }
+      
+      .professional.image{
+        background-image: url("../imgs/MLP_7372.jpg");
+        background-size:cover;
+      }
+
+      .personal.image{
+        background-image: url("../imgs/1491785_625374170853917_1543696874_n.jpg");
+        background-size:cover;
+      }
+    }
+
+    .border2px{
+      border: 2px solid color(darker-accent);
+    }
+
+    #card {
+      margin-left: auto;
+      margin-right:auto;
+      margin-top:10px;
+      margin-bottom:10px;
+      width: 80%;
+      height: 25%;
+      border-radius: 5px;
+      background-color: color(white);
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      padding: $padding;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      div {
+        margin: auto;
+
+        span.h1 {
+          font-size: 2em;
+          margin-top: auto auto auto auto;
+        }
+      }
+    }
+  }
+}

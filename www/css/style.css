@@ -1,0 +1,110 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0px;
+  background-color: #0278C2;
+  font-family: "Courier New", Courier, monospace;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+body #bg.br {
+  background-color: #15B5F4;
+  -webkit-clip-path: polygon(100% 0, 100% 38%, 100% 100%, 0 100%, 85% 91%);
+          clip-path: polygon(100% 0, 100% 38%, 100% 100%, 0 100%, 85% 91%);
+}
+
+body #bg.tl {
+  background-color: #015990;
+  -webkit-clip-path: polygon(100% 0, 38% 0%, 0 0, 0 100%, 15% 9%);
+          clip-path: polygon(100% 0, 38% 0%, 0 0, 0 100%, 15% 9%);
+}
+
+main {
+  width: 100%;
+}
+
+main section .circleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section .circleContainer .circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+main section .circleContainer .professional.image {
+  background-image: url("../imgs/MLP_7372.jpg");
+  background-size: cover;
+}
+
+main section .circleContainer .personal.image {
+  background-image: url("../imgs/1491785_625374170853917_1543696874_n.jpg");
+  background-size: cover;
+}
+
+main section .border2px {
+  border: 2px solid #015990;
+}
+
+main section #card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+  height: 25%;
+  border-radius: 5px;
+  background-color: #EFFAFE;
+  text-align: center;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section #card div {
+  margin: auto;
+}
+
+main section #card div span.h1 {
+  font-size: 2em;
+  margin-top: auto auto auto auto;
+}
+/*# sourceMappingURL=style.css.map */
