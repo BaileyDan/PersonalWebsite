@@ -8,20 +8,22 @@ body {
   margin: 0px;
   background-color: color(primary);
   font-family: "Courier New", Courier, monospace;
-  display: flex;
-  align-items: center;
+  //display: flex;
+  //align-items: center;
+  //flex-direction: column;
 
   #bg {
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
+    max-width: 512px;
 
     &.br {
       background-color: color(lighter-accent);
       clip-path: polygon(100% 0, 100% 38%, 100% 100%, 0 100%, 85% 91%);
+      right: 0px !important;
     }
 
     &.tl {
@@ -31,59 +33,147 @@ body {
   }
 }
 
+
+header {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  position: absolute;
+  top:0;
+  left:0;
+
+  .menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    text-align: center;
+  }
+  .circleContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: color(white);
+  }
+
+  .circle-small {
+    height: $smallcircle;
+    width: $smallcircle;
+    border-radius: 50%;
+  }
+
+  .border2px {
+    border: 2px solid color(darker-accent);
+  }
+
+  .image {
+    margin-bottom: 5px;
+  }
+
+  .professional.image {
+    background-image: url($profImg40);
+    background-size: cover;
+  }
+
+  .personal.image {
+    background-image: url($persnImg40);
+    background-size: cover;
+  }
+
+  .home.image {
+    background-image: url($homeImg);
+    background-size: cover;
+  }
+}
+
 main {
   width: 100%;
+  height: 100%;
+
   section {
-    .circleContainer {
+    &#home {
       display:flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
+      height: 100%;
 
-      .circle{
-        height:$circleSize;
-        width: $circleSize;
-        border-radius: 50%;
-      }
-      
-      .professional.image{
-        background-image: url("../imgs/MLP_7372.jpg");
-        background-size:cover;
+      .row{
+        display:flex;
+        width:100%;
+        flex-direction: column;
       }
 
-      .personal.image{
-        background-image: url("../imgs/1491785_625374170853917_1543696874_n.jpg");
-        background-size:cover;
+      .circleContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: color(white);
+
+        a {
+          text-decoration: none;
+          text-align: center;
+          color: inherit;
+        }
+
+        .circle {
+          height: $circleSize;
+          width: $circleSize;
+          border-radius: 50%;
+        }
+
+        .professional.image {
+          background-image: url($profImg125);
+          background-size: cover;
+        }
+
+        .personal.image {
+          background-image: url($persnImg125);
+          background-size: cover;
+        }
       }
-    }
 
-    .border2px{
-      border: 2px solid color(darker-accent);
-    }
+      .border2px {
+        border: 2px solid color(darker-accent);
+      }
 
-    #card {
-      margin-left: auto;
-      margin-right:auto;
-      margin-top:10px;
-      margin-bottom:10px;
-      width: 80%;
-      height: 25%;
-      border-radius: 5px;
-      background-color: color(white);
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      padding: $padding;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      #card {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 80%;
+        max-width: 384px;
+        height: 15%;
+        border-radius: 5px;
+        background-color: color(white);
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        padding: $padding;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-      div {
-        margin: auto;
+        div {
+          margin: auto;
 
-        span.h1 {
-          font-size: 2em;
-          margin-top: auto auto auto auto;
+          span.h1 {
+            font-size: 2em;
+            margin-top: auto auto auto auto;
+          }
         }
       }
     }
   }
+ 
+}
+.displayNone{
+  display:none;
 }

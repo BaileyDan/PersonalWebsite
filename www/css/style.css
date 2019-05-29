@@ -8,27 +8,22 @@ body {
   margin: 0px;
   background-color: #0278C2;
   font-family: "Courier New", Courier, monospace;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 body #bg {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
+  max-width: 512px;
 }
 
 body #bg.br {
   background-color: #15B5F4;
   -webkit-clip-path: polygon(100% 0, 100% 38%, 100% 100%, 0 100%, 85% 91%);
           clip-path: polygon(100% 0, 100% 38%, 100% 100%, 0 100%, 85% 91%);
+  right: 0px !important;
 }
 
 body #bg.tl {
@@ -37,11 +32,48 @@ body #bg.tl {
           clip-path: polygon(100% 0, 38% 0%, 0 0, 0 100%, 15% 9%);
 }
 
-main {
+header {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-main section .circleContainer {
+header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header a {
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+}
+
+header .circleContainer {
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,35 +84,116 @@ main section .circleContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #EFFAFE;
 }
 
-main section .circleContainer .circle {
-  height: 100px;
-  width: 100px;
+header .circle-small {
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
 }
 
-main section .circleContainer .professional.image {
-  background-image: url("../imgs/MLP_7372.jpg");
-  background-size: cover;
-}
-
-main section .circleContainer .personal.image {
-  background-image: url("../imgs/1491785_625374170853917_1543696874_n.jpg");
-  background-size: cover;
-}
-
-main section .border2px {
+header .border2px {
   border: 2px solid #015990;
 }
 
-main section #card {
+header .image {
+  margin-bottom: 5px;
+}
+
+header .professional.image {
+  background-image: url("../imgs/prof_40_opt.jpg");
+  background-size: cover;
+}
+
+header .personal.image {
+  background-image: url("../imgs/psn_40_opt.jpg");
+  background-size: cover;
+}
+
+header .home.image {
+  background-image: url("../imgs/home.svg");
+  background-size: cover;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+main section#home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+main section#home .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main section#home .circleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #EFFAFE;
+}
+
+main section#home .circleContainer a {
+  text-decoration: none;
+  text-align: center;
+  color: inherit;
+}
+
+main section#home .circleContainer .circle {
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+}
+
+main section#home .circleContainer .professional.image {
+  background-image: url("../imgs/prof_125_opt.jpg");
+  background-size: cover;
+}
+
+main section#home .circleContainer .personal.image {
+  background-image: url("../imgs/psn_125_opt.jpg");
+  background-size: cover;
+}
+
+main section#home .border2px {
+  border: 2px solid #015990;
+}
+
+main section#home #card {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   width: 80%;
-  height: 25%;
+  max-width: 384px;
+  height: 15%;
   border-radius: 5px;
   background-color: #EFFAFE;
   text-align: center;
@@ -99,12 +212,16 @@ main section #card {
           align-items: center;
 }
 
-main section #card div {
+main section#home #card div {
   margin: auto;
 }
 
-main section #card div span.h1 {
+main section#home #card div span.h1 {
   font-size: 2em;
   margin-top: auto auto auto auto;
+}
+
+.displayNone {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

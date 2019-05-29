@@ -2,13 +2,21 @@ $colors:(
     primary:#0278C2,
     lighter-accent: #15B5F4,
     darker-accent:darken(#0278C2, 10%),
-    traid-accent-red:#CC1617,
+    triadic-accent-green:#78C202,
+    triadic-accent-pink:#C20278,
     white:#EFFAFE,
     black:#0A0908
 );
 
 $padding: 15px;
-$circleSize:100px;
+$circleSize:125px;
+$smallcircle:40px;
+
+$profImg125: "../imgs/prof_125_opt.jpg";
+$profImg40: "../imgs/prof_40_opt.jpg";
+$persnImg125:"../imgs/psn_125_opt.jpg";
+$persnImg40:"../imgs/psn_40_opt.jpg";
+$homeImg:"../imgs/home.svg";
 
 @function color($color-name) {
     @return map-get($colors, $color-name)
